@@ -10,8 +10,6 @@ const addNumbersArrow = (a:number, b:number):string => {
 function multiply (firstNumber:number, secondNumber?:number, base:number = 2) {
     return firstNumber * base;
 }
-                              
-
 const result:number = addNumbers(1,2);
 const result2:string = addNumbersArrow(1,2);
 const multiplyResult:number = multiply(13);
@@ -19,6 +17,32 @@ console.log({result});
 console.log({result2});
 console.log({multiplyResult});
 
+// Se declara la interface del caracter
+interface Character {
+    name: string;
+    hp:number;
+    showHp: () => void;
+}
+
+// Curacion del personaje donde espera un objeto en este caso el personaje y un valor para curar en el caso de amount
+const healCharacter = (character:Character, amount:number)=>{
+    character.hp += amount;
+}
+
+//Definir el personaje:
+const emperador:Character = {
+    name: 'Emperador',
+    hp: 50,
+    showHp() {
+        console.log(`Puntos de vida: ${this.hp}`);
+    }
+}
+
+healCharacter(emperador, 10);
+healCharacter(emperador, 10);
+
+emperador.showHp();
 
 
+  
 export{}
