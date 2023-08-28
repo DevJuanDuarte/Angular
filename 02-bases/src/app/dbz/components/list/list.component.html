@@ -1,6 +1,7 @@
 <h4>Listado</h4>
 <!-- Componente independiente -->
 <ul class="list-group">
-    <li class="list-group-item">Krillin - 500</li>
-    <li class="list-group-item">Goku - 1000</li>
+    <li *ngFor="let character of characterList" class="list-group-item">
+        {{ character.name }} - Power : {{ character.power }}
+    </li>
 </ul>
