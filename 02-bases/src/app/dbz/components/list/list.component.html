@@ -1,0 +1,30 @@
+<h4>Listado</h4>
+<!-- Componente independiente -->
+<ul class="list-group">
+    <li 
+    *ngFor="let character of characterList; 
+            let i = index;
+            let isFirst = first;
+            let isLast = last;
+            let isEven = even;
+            let isOdd = odd;
+            "
+            
+    class="list-group-item"
+    
+    [ngClass]="{
+        'list-group-item-dark': isLast,
+        'list-group-item-success': isFirst,
+        'list-group-item-warning': isOdd
+    }"
+    >
+        <span class="text-primary">{{i + 1}}. </span>
+        <span>{{ character.name }} - </span>
+        <strong>Power : </strong>
+        <span>{{ character.power }}</span>
+        <!-- <span> Es el primero: {{i == 0}}</span>
+        <span> Es el ultimo: {{isLast}}</span> -->
+        <!-- <span> Es par : {{isEven}}</span>
+        <span> Es impar : {{isOdd}}</span> -->
+    </li>
+</ul>
