@@ -1,9 +1,9 @@
 export class Person {
-    public name: string;
+    public name:string;
     public address: string;
 
-    constructor () {
-        this.name = 'Juan David';
+    constructor(){
+        this.name = 'Juan David Duarte';
         this.address = 'Giron';
     }
 }
