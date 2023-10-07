@@ -4,8 +4,8 @@
     <hr class="text-light">
 
     <div class="list-group list-reset">
-        <button class="list-group-item list-group-item-action">
-            Valorant
+        <button *ngFor="let tag of tags" class="list-group-item list-group-item-action">
+            {{tag | titlecase}}
         </button>
     </div>
 
