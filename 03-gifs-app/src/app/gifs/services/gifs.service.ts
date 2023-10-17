@@ -41,7 +41,7 @@ export class GifsService {
         this.http.get<SearchResponse>(`${ this.serviceUrl }/search?`, { params })
             .subscribe( resp => {
                 this.gifsList = resp.data;
-                console.log({gifs: this.gifsList});
+                // console.log({gifs: this.gifsList});
             });
 
         // fetch('https://api.giphy.com/v1/gifs/search?api_key=7OmCR5CSjA1PdiSiGmk5ng9a9Fv8JlVl&q=valorant&limit=5')
