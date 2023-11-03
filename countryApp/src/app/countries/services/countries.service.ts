@@ -20,5 +20,26 @@ export class CountriesService {
             })
         )
     }
+
+    searchCountry(term:string):Observable<Country[]>{
+        return this.http.get<Country[]>(`${this.apiUrl}/name/${ term }`)
+        .pipe(
+            //Manejo de errores en observables: en caso de buscar un registro que no existe devuelve un arreglo vacio
+            catchError( error => {
+                console.log(error);
+                return of([])
+            })
+        )
+    }
+
+    searchRegion( region : string ): Observable<Country[]>{
+        return this.http.get<Country[]>(`${this.apiUrl}/region/${ region }`)
+        .pipe(
+            catchError( error => {
+                console.log(error);
+                return of([])
+            })
+        )
+    }
     
 }
