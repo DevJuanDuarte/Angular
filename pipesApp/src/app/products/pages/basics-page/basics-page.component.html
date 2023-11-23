@@ -1,1 +1,17 @@
-<p>basics-page works!</p>
+<p-panel [showHeader]="false">
+  <h1>Pipes Basicos</h1>
+  <p>Pipes incluidos en Angular - Usualmente incluidos en el common</p>
+</p-panel>
+<div class="p-grid">
+  <div class="col-4">
+    <p-card header="uppercase">{{nameLower | uppercase}}</p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="lowercase">{{nameUpper | lowercase}}</p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="titlecase">{{fullName | titlecase}}</p-card>
+  </div>
+</div>
