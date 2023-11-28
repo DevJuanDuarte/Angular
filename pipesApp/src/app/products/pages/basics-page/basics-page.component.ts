@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class BasicsPageComponent {
   public nameLower: string = 'juan';
   public nameUpper: string = 'juan';
-  public fullName:string = 'jUaN dUarTe'
+  public fullName: string = 'jUaN dUarTe';
+
+  public customDate: Date = new Date();
 }
