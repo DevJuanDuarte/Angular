@@ -9,7 +9,7 @@ import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 //localhost:4200/heroes/''
 // Parece ser una ruta padre pero esta ruta es una hija que cargamos en el sistema de modulos principales:app-RouterTestingHarness.module.ts
 const routes: Routes = [
-  {
+  {   
     path: '',
     component: LayoutPageComponent,
     children: [
