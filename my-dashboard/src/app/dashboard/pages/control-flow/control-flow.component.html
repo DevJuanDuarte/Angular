@@ -1,1 +1,39 @@
-<p>control-flow works!</p>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+
+  <!-- ngIf a @if -->
+  <div class="bg-white rounded shadow p-10">
+    
+    <h2 class="text-2xl font-bold mb-5">
+      if: {{showcontent()}}
+    </h2>
+
+    <button class="bg-blue-500 hover:bg-blue-600 p-2 rounded text-white" (click)="toogleContent()">Click me</button>
+
+    @if (showcontent()){
+      <h1>Hola</h1>
+    } @else {
+      <h1>***************</h1>
+    }
+  </div>
+  
+  <!-- Switch -->
+  <div class="bg-white rounded shadow p-10">
+    @switch(grade()){
+      @case('A'){
+        <p>Aprobado</p>
+      }
+      @case('B'){
+        <p>Raspando</p>
+      }
+      @case ('F') {
+        <p>Reprobaste</p>
+      }
+    }
+  </div>
+
+
+  
+</section>
+
+ 
