@@ -38,10 +38,19 @@ const emperador:Character = {
     }
 }
 
-healCharacter(emperador, 10);
-healCharacter(emperador, 10);
+const sentinel:Character = {
+    name: 'Sentinel',
+    hp: 50,
+    showHp() {
+        console.log(`Puntos de vida: ${this.hp}`);
+    }
+}
+
+healCharacter(emperador, 500);
+healCharacter(sentinel, 200);
 
 emperador.showHp();
+sentinel.showHp();
 
 
   

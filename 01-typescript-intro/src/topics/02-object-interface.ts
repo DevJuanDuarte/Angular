@@ -14,9 +14,9 @@ const strider:Character = {
     skills: ['Velocidad', 'Resistencia', 'Lanza']
 }
 
-strider.hometown = 'Riverdell'
+// strider.hometown = 'Riverdell'
 
-console.table(strider);
+console.log(strider);
 
 
 
