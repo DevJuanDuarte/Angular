@@ -19,15 +19,16 @@ const audioPlayer:AudioPlayer = {
         year: "2023"
     }
 }
-const song = 'New Song';
-const {song:anotherSong, songDuration:duration, details} = audioPlayer;
-const {author} = details;
+const {audioVolume:audioNea, song:musicSong, songDuration:duration, details} = audioPlayer;
+const {author,year} = details;
 
-// console.log('Song: ', anotherSong);
-// console.log('Duration: ', duration);
-// console.log('Author: ', author);
+console.log('Song: ', musicSong);
+console.log('Duration: ', duration);
+console.log('Author: ', author);
+console.log('Volumen: ', audioNea);
+console.log('Año: ', year);
 
-const [,,trunks = 'Not Found']:string[] = ['Goku','Vegeta'];
+const [,,trunks = 'Not Found']:string[] = ['Goku','Vegeta', 'Picoro'];
 
 console.log('Personaje 3: ', trunks );
 

@@ -3,10 +3,7 @@ export interface Product {
     price:number;
 }
 
-const phone:Product = {
-    description:'Iphone 14 Pro max',
-    price:450
-}
+const phone:Product = { description:'Iphone 14 Pro max', price:450 }
 
 const tablet:Product ={
     description: 'Ipad Mini',
@@ -38,7 +35,7 @@ export function taxCalculation( options:TaxCalculationsOptions ): [number, numbe
     tax:tax
  });
 
-//  console.log('Total: ', total);
-//  console.log('Tax: ', totalTax);
+ console.log('Total: ', total);
+ console.log('Tax: ', totalTax);
 
 
