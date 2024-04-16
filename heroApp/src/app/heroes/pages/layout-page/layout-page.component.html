@@ -1,2 +1,31 @@
-<p>layout-page works!</p>
-<router-outlet/>
+<!-- Contenedor del sidenav -->
+<mat-sidenav-container fullscreen>
+
+  <!-- Se posiciona en la parte izquierda -->
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{width: '250px'}">
+
+    <mat-toolbar color="warn">
+      <span>Menu</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item *ngFor="let item of itemsNavegacion" [routerLink]="item.url" (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon> {{item.label}}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Barra que va en la parte superior -->
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <span class="spacer"></span> <!-- Separador que toma todo el ancho -->
+    <button mat-button><mat-icon>logout</mat-icon>Cerrar sesión</button>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet/>
+  </div>
+
+</mat-sidenav-container>
