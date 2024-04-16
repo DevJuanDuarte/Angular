@@ -1,5 +1,5 @@
-<div class="flex flex-column">
-  <span class="text-lg mb-4">Login</span>
+<div id="principal" class="flex flex-column">
+  <span class="text-lg mb-4 text-center">Register</span>
 
   <mat-form-field>
     <mat-label>Usuario</mat-label>
@@ -17,10 +17,27 @@
   </mat-form-field>
 
 
-  <button mat-button mat-flat-button color="primary"><mat-icon>save</mat-icon>Registrarse</button>
-
+  <div class="botoncito">
+    <button mat-button mat-raised-button color="primary"><mat-icon>save</mat-icon>Registrarse</button>
+  </div>
 
   <div class="flex justify-content-end mt-5">
     <a routerLink="/auth/login">¿Ya tienes cuenta? Ingresa</a>
   </div>
 </div>
+
+<style>
+  #principal {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  .botoncito {
+    display: grid;
+    place-items: center;
+  }
+</style>
