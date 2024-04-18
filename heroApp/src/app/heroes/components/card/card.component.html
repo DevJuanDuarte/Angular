@@ -7,6 +7,7 @@
   <mat-divider />
 
   <!-- TODO: La imagen -->
+  <img mat-card-image [src]="hero | heroImage" [alt]="hero.superhero">
 
   <mat-card-content class="mt-2">
     <h4>{{hero.publisher}}</h4>
@@ -14,7 +15,7 @@
       <strong>Primera aparicion: </strong>{{hero.first_appearance}}
       <br>
       <mat-chip-listbox>
-        <mat-chip *ngFor="let character of hero.characters.split(',')| slice:0:3">{{character}}</mat-chip>
+        <mat-chip *ngFor="let character of hero.characters.split(',')| slice:0:1">{{character}}</mat-chip>
       </mat-chip-listbox>
     </p>
   </mat-card-content>
