@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, of } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
 
 import { Hero } from '../interfaces/hero.interface';
 import { environments } from '../../../../environments/environments';
@@ -25,7 +25,7 @@ export class HeroService {
   se le pasa la ruta especifica de los heroes con el id
   5. Se pasa un pipe luego de llamar la ruta para el manejo de errores.
   */
-  
+
   getHeroById(id: string): Observable<Hero | undefined> {
     return this.httpClient.get<Hero>(`${this.baseUrl}/heroes/${id}`)
       .pipe(
@@ -37,6 +37,23 @@ export class HeroService {
   //Regresa un observable que deberia estar emitiendo valores de Hero como un arreglo
   getSuggestions(query: string): Observable<Hero[]> {
     return this.httpClient.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`)
+  }
+
+  addHero(hero: Hero): Observable<Hero> {
+    return this.httpClient.post<Hero>(`${this.baseUrl}/heroes`, hero)
+  }
+
+  updateHero(hero: Hero): Observable<Hero> {
+    if (!hero.id) throw Error('El id del heroe es requerido')
+    return this.httpClient.patch<Hero>(`${this.baseUrl}/heroes/${hero.id}`, hero)
+  }
+
+  deleteHero(id: string): Observable<boolean> {
+    return this.httpClient.delete(`${this.baseUrl}/heroes/${id}`)
+      .pipe(
+        catchError(err => of(false)),
+        map(resp => true)
+      );
   }
 
 }
