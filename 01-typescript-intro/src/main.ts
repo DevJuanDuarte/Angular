@@ -1,10 +1,10 @@
 // import './topics/fibonacci'
 // import './topics/01-basic-types';
 // import './topics/02-object-interface';
-// import './topics/03-functions';
+import './topics/03-functions';
 // import './topics/04-homework-types';
 // import './topics/05-destructuring';
-import './topics/06-functions-destructuring';
+// import './topics/06-functions-destructuring';
 // import './topics/destructuring2';
 // import './topics/07-import-export'
 // import './topics/08-classes'

@@ -7,12 +7,12 @@ const addNumbersArrow = (a:number, b:number):string => {
     return `${a + b}`;
 }
 
-function multiply (firstNumber:number, secondNumber?:number, base:number = 2) {
-    return firstNumber * base;
+function multiply (firstNumber:number, secondNumber:number, base:number = 2) {
+    return (firstNumber + secondNumber) * base;
 }
 const result:number = addNumbers(1,2);
 const result2:string = addNumbersArrow(1,2);
-const multiplyResult:number = multiply(13);
+const multiplyResult:number = multiply(13,2);
 console.log({result});
 console.log({result2});
 console.log({multiplyResult});

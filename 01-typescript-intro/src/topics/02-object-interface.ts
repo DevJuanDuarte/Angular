@@ -11,7 +11,8 @@ interface Character {
 const strider:Character = {
     name: 'Juan',
     hp: 100,
-    skills: ['Velocidad', 'Resistencia', 'Lanza']
+    skills: ['Velocidad', 'Resistencia', 'Lanza'],
+    // hometown: 'Riverdell'
 }
 
 // strider.hometown = 'Riverdell'
